@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11FDAB7E-0A70-4EB0-BCA3-06CBEB4D30C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSO.SB.OBS</RootNamespace>
+    <AssemblyName>TSO.SB.OBS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\EventSubscription.g.cs" />
+    <Compile Include="Enums\RequestBatchExecutionType.g.cs" />
+    <Compile Include="Enums\RequestStatus.g.cs" />
+    <Compile Include="Enums\WebSocketCloseCode.g.cs" />
+    <Compile Include="Enums\WebSocketOpCode.g.cs" />
+    <Compile Include="Events\Config\CurrentProfileChanged.g.cs" />
+    <Compile Include="Events\Config\CurrentProfileChanging.g.cs" />
+    <Compile Include="Events\Config\CurrentSceneCollectionChanged.g.cs" />
+    <Compile Include="Events\Config\CurrentSceneCollectionChanging.g.cs" />
+    <Compile Include="Events\Config\ProfileListChanged.g.cs" />
+    <Compile Include="Events\Config\SceneCollectionListChanged.g.cs" />
+    <Compile Include="Events\Filters\SourceFilterCreated.g.cs" />
+    <Compile Include="Events\Filters\SourceFilterEnableStateChanged.g.cs" />
+    <Compile Include="Events\Filters\SourceFilterListReindexed.g.cs" />
+    <Compile Include="Events\Filters\SourceFilterNameChanged.g.cs" />
+    <Compile Include="Events\Filters\SourceFilterRemoved.g.cs" />
+    <Compile Include="Events\Filters\SourceFilterSettingsChanged.g.cs" />
+    <Compile Include="Events\General\CustomEvent.g.cs" />
+    <Compile Include="Events\General\ExitStarted.g.cs" />
+    <Compile Include="Events\General\VendorEvent.g.cs" />
+    <Compile Include="Events\Inputs\InputActiveStateChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputAudioBalanceChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputAudioMonitorTypeChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputAudioSyncOffsetChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputAudioTracksChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputCreated.g.cs" />
+    <Compile Include="Events\Inputs\InputMuteStateChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputNameChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputRemoved.g.cs" />
+    <Compile Include="Events\Inputs\InputSettingsChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputShowStateChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputVolumeChanged.g.cs" />
+    <Compile Include="Events\Inputs\InputVolumeMeters.g.cs" />
+    <Compile Include="Events\MediaInputs\MediaInputActionTriggered.g.cs" />
+    <Compile Include="Events\MediaInputs\MediaInputPlaybackEnded.g.cs" />
+    <Compile Include="Events\MediaInputs\MediaInputPlaybackStarted.g.cs" />
+    <Compile Include="Events\Outputs\RecordStateChanged.g.cs" />
+    <Compile Include="Events\Outputs\ReplayBufferSaved.g.cs" />
+    <Compile Include="Events\Outputs\ReplayBufferStateChanged.g.cs" />
+    <Compile Include="Events\Outputs\StreamStateChanged.g.cs" />
+    <Compile Include="Events\Outputs\VirtualcamStateChanged.g.cs" />
+    <Compile Include="Events\SceneItems\SceneItemCreated.g.cs" />
+    <Compile Include="Events\SceneItems\SceneItemEnableStateChanged.g.cs" />
+    <Compile Include="Events\SceneItems\SceneItemListReindexed.g.cs" />
+    <Compile Include="Events\SceneItems\SceneItemLockStateChanged.g.cs" />
+    <Compile Include="Events\SceneItems\SceneItemRemoved.g.cs" />
+    <Compile Include="Events\SceneItems\SceneItemSelected.g.cs" />
+    <Compile Include="Events\SceneItems\SceneItemTransformChanged.g.cs" />
+    <Compile Include="Events\Scenes\CurrentPreviewSceneChanged.g.cs" />
+    <Compile Include="Events\Scenes\CurrentProgramSceneChanged.g.cs" />
+    <Compile Include="Events\Scenes\SceneCreated.g.cs" />
+    <Compile Include="Events\Scenes\SceneListChanged.g.cs" />
+    <Compile Include="Events\Scenes\SceneNameChanged.g.cs" />
+    <Compile Include="Events\Scenes\SceneRemoved.g.cs" />
+    <Compile Include="Events\Transitions\CurrentSceneTransitionChanged.g.cs" />
+    <Compile Include="Events\Transitions\CurrentSceneTransitionDurationChanged.g.cs" />
+    <Compile Include="Events\Transitions\SceneTransitionEnded.g.cs" />
+    <Compile Include="Events\Transitions\SceneTransitionStarted.g.cs" />
+    <Compile Include="Events\Transitions\SceneTransitionVideoEnded.g.cs" />
+    <Compile Include="Events\Ui\ScreenshotSaved.g.cs" />
+    <Compile Include="Events\Ui\StudioModeStateChanged.g.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\Config\CreateProfile.g.cs" />
+    <Compile Include="Requests\Config\CreateSceneCollection.g.cs" />
+    <Compile Include="Requests\Config\GetPersistentData.g.cs" />
+    <Compile Include="Requests\Config\GetProfileList.g.cs" />
+    <Compile Include="Requests\Config\GetProfileParameter.g.cs" />
+    <Compile Include="Requests\Config\GetRecordDirectory.g.cs" />
+    <Compile Include="Requests\Config\GetSceneCollectionList.g.cs" />
+    <Compile Include="Requests\Config\GetStreamServiceSettings.g.cs" />
+    <Compile Include="Requests\Config\GetVideoSettings.g.cs" />
+    <Compile Include="Requests\Config\RemoveProfile.g.cs" />
+    <Compile Include="Requests\Config\SetCurrentProfile.g.cs" />
+    <Compile Include="Requests\Config\SetCurrentSceneCollection.g.cs" />
+    <Compile Include="Requests\Config\SetPersistentData.g.cs" />
+    <Compile Include="Requests\Config\SetProfileParameter.g.cs" />
+    <Compile Include="Requests\Config\SetRecordDirectory.g.cs" />
+    <Compile Include="Requests\Config\SetStreamServiceSettings.g.cs" />
+    <Compile Include="Requests\Config\SetVideoSettings.g.cs" />
+    <Compile Include="Requests\Filters\CreateSourceFilter.g.cs" />
+    <Compile Include="Requests\Filters\GetSourceFilter.g.cs" />
+    <Compile Include="Requests\Filters\GetSourceFilterDefaultSettings.g.cs" />
+    <Compile Include="Requests\Filters\GetSourceFilterKindList.g.cs" />
+    <Compile Include="Requests\Filters\GetSourceFilterList.g.cs" />
+    <Compile Include="Requests\Filters\RemoveSourceFilter.g.cs" />
+    <Compile Include="Requests\Filters\SetSourceFilterEnabled.g.cs" />
+    <Compile Include="Requests\Filters\SetSourceFilterIndex.g.cs" />
+    <Compile Include="Requests\Filters\SetSourceFilterName.g.cs" />
+    <Compile Include="Requests\Filters\SetSourceFilterSettings.g.cs" />
+    <Compile Include="Requests\General\BroadcastCustomEvent.g.cs" />
+    <Compile Include="Requests\General\CallVendorRequest.g.cs" />
+    <Compile Include="Requests\General\GetHotkeyList.g.cs" />
+    <Compile Include="Requests\General\GetStats.g.cs" />
+    <Compile Include="Requests\General\GetVersion.g.cs" />
+    <Compile Include="Requests\General\Sleep.g.cs" />
+    <Compile Include="Requests\General\TriggerHotkeyByKeySequence.g.cs" />
+    <Compile Include="Requests\General\TriggerHotkeyByName.g.cs" />
+    <Compile Include="Requests\Inputs\CreateInput.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputAudioBalance.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputAudioMonitorType.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputAudioSyncOffset.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputAudioTracks.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputDefaultSettings.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputKindList.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputList.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputMute.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputPropertiesListPropertyItems.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputSettings.g.cs" />
+    <Compile Include="Requests\Inputs\GetInputVolume.g.cs" />
+    <Compile Include="Requests\Inputs\GetSpecialInputs.g.cs" />
+    <Compile Include="Requests\Inputs\PressInputPropertiesButton.g.cs" />
+    <Compile Include="Requests\Inputs\RemoveInput.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputAudioBalance.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputAudioMonitorType.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputAudioSyncOffset.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputAudioTracks.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputMute.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputName.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputSettings.g.cs" />
+    <Compile Include="Requests\Inputs\SetInputVolume.g.cs" />
+    <Compile Include="Requests\Inputs\ToggleInputMute.g.cs" />
+    <Compile Include="Requests\MediaInputs\GetMediaInputStatus.g.cs" />
+    <Compile Include="Requests\MediaInputs\OffsetMediaInputCursor.g.cs" />
+    <Compile Include="Requests\MediaInputs\SetMediaInputCursor.g.cs" />
+    <Compile Include="Requests\MediaInputs\TriggerMediaInputAction.g.cs" />
+    <Compile Include="Requests\Outputs\GetLastReplayBufferReplay.g.cs" />
+    <Compile Include="Requests\Outputs\GetOutputList.g.cs" />
+    <Compile Include="Requests\Outputs\GetOutputSettings.g.cs" />
+    <Compile Include="Requests\Outputs\GetOutputStatus.g.cs" />
+    <Compile Include="Requests\Outputs\GetReplayBufferStatus.g.cs" />
+    <Compile Include="Requests\Outputs\GetVirtualCamStatus.g.cs" />
+    <Compile Include="Requests\Outputs\SaveReplayBuffer.g.cs" />
+    <Compile Include="Requests\Outputs\SetOutputSettings.g.cs" />
+    <Compile Include="Requests\Outputs\StartOutput.g.cs" />
+    <Compile Include="Requests\Outputs\StartReplayBuffer.g.cs" />
+    <Compile Include="Requests\Outputs\StartVirtualCam.g.cs" />
+    <Compile Include="Requests\Outputs\StopOutput.g.cs" />
+    <Compile Include="Requests\Outputs\StopReplayBuffer.g.cs" />
+    <Compile Include="Requests\Outputs\StopVirtualCam.g.cs" />
+    <Compile Include="Requests\Outputs\ToggleOutput.g.cs" />
+    <Compile Include="Requests\Outputs\ToggleReplayBuffer.g.cs" />
+    <Compile Include="Requests\Outputs\ToggleVirtualCam.g.cs" />
+    <Compile Include="Requests\Record\GetRecordStatus.g.cs" />
+    <Compile Include="Requests\Record\PauseRecord.g.cs" />
+    <Compile Include="Requests\Record\ResumeRecord.g.cs" />
+    <Compile Include="Requests\Record\StartRecord.g.cs" />
+    <Compile Include="Requests\Record\StopRecord.g.cs" />
+    <Compile Include="Requests\Record\ToggleRecord.g.cs" />
+    <Compile Include="Requests\Record\ToggleRecordPause.g.cs" />
+    <Compile Include="Requests\SceneItems\CreateSceneItem.g.cs" />
+    <Compile Include="Requests\SceneItems\DuplicateSceneItem.g.cs" />
+    <Compile Include="Requests\SceneItems\GetGroupSceneItemList.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemBlendMode.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemEnabled.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemId.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemIndex.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemList.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemLocked.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemSource.g.cs" />
+    <Compile Include="Requests\SceneItems\GetSceneItemTransform.g.cs" />
+    <Compile Include="Requests\SceneItems\RemoveSceneItem.g.cs" />
+    <Compile Include="Requests\SceneItems\SetSceneItemBlendMode.g.cs" />
+    <Compile Include="Requests\SceneItems\SetSceneItemEnabled.g.cs" />
+    <Compile Include="Requests\SceneItems\SetSceneItemIndex.g.cs" />
+    <Compile Include="Requests\SceneItems\SetSceneItemLocked.g.cs" />
+    <Compile Include="Requests\SceneItems\SetSceneItemTransform.g.cs" />
+    <Compile Include="Requests\Scenes\CreateScene.g.cs" />
+    <Compile Include="Requests\Scenes\GetCurrentPreviewScene.g.cs" />
+    <Compile Include="Requests\Scenes\GetCurrentProgramScene.g.cs" />
+    <Compile Include="Requests\Scenes\GetGroupList.g.cs" />
+    <Compile Include="Requests\Scenes\GetSceneList.g.cs" />
+    <Compile Include="Requests\Scenes\GetSceneSceneTransitionOverride.g.cs" />
+    <Compile Include="Requests\Scenes\RemoveScene.g.cs" />
+    <Compile Include="Requests\Scenes\SetCurrentPreviewScene.g.cs" />
+    <Compile Include="Requests\Scenes\SetCurrentProgramScene.g.cs" />
+    <Compile Include="Requests\Scenes\SetSceneName.g.cs" />
+    <Compile Include="Requests\Scenes\SetSceneSceneTransitionOverride.g.cs" />
+    <Compile Include="Requests\Sources\GetSourceActive.g.cs" />
+    <Compile Include="Requests\Sources\GetSourceScreenshot.g.cs" />
+    <Compile Include="Requests\Sources\SaveSourceScreenshot.g.cs" />
+    <Compile Include="Requests\Stream\GetStreamStatus.g.cs" />
+    <Compile Include="Requests\Stream\SendStreamCaption.g.cs" />
+    <Compile Include="Requests\Stream\StartStream.g.cs" />
+    <Compile Include="Requests\Stream\StopStream.g.cs" />
+    <Compile Include="Requests\Stream\ToggleStream.g.cs" />
+    <Compile Include="Requests\Transitions\GetCurrentSceneTransition.g.cs" />
+    <Compile Include="Requests\Transitions\GetCurrentSceneTransitionCursor.g.cs" />
+    <Compile Include="Requests\Transitions\GetSceneTransitionList.g.cs" />
+    <Compile Include="Requests\Transitions\GetTransitionKindList.g.cs" />
+    <Compile Include="Requests\Transitions\SetCurrentSceneTransition.g.cs" />
+    <Compile Include="Requests\Transitions\SetCurrentSceneTransitionDuration.g.cs" />
+    <Compile Include="Requests\Transitions\SetCurrentSceneTransitionSettings.g.cs" />
+    <Compile Include="Requests\Transitions\SetTBarPosition.g.cs" />
+    <Compile Include="Requests\Transitions\TriggerStudioModeTransition.g.cs" />
+    <Compile Include="Requests\Ui\GetMonitorList.g.cs" />
+    <Compile Include="Requests\Ui\GetStudioModeEnabled.g.cs" />
+    <Compile Include="Requests\Ui\OpenInputFiltersDialog.g.cs" />
+    <Compile Include="Requests\Ui\OpenInputInteractDialog.g.cs" />
+    <Compile Include="Requests\Ui\OpenInputPropertiesDialog.g.cs" />
+    <Compile Include="Requests\Ui\OpenSourceProjector.g.cs" />
+    <Compile Include="Requests\Ui\OpenVideoMixProjector.g.cs" />
+    <Compile Include="Requests\Ui\SetStudioModeEnabled.g.cs" />
+    <Compile Include="Types\Types.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
