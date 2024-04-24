@@ -13,17 +13,17 @@ Note: Fields must be specified in pairs. For example, you cannot set only `baseW
 	public struct SetVideoSettingsRequestData
 	{
 		[JsonProperty("fpsNumerator", NullValueHandling = NullValueHandling.Ignore)]
-		public int FpsNumerator;
+		public double? FpsNumerator;
 		[JsonProperty("fpsDenominator", NullValueHandling = NullValueHandling.Ignore)]
-		public int FpsDenominator;
+		public double? FpsDenominator;
 		[JsonProperty("baseWidth", NullValueHandling = NullValueHandling.Ignore)]
-		public int BaseWidth;
+		public double? BaseWidth;
 		[JsonProperty("baseHeight", NullValueHandling = NullValueHandling.Ignore)]
-		public int BaseHeight;
+		public double? BaseHeight;
 		[JsonProperty("outputWidth", NullValueHandling = NullValueHandling.Ignore)]
-		public int OutputWidth;
+		public double? OutputWidth;
 		[JsonProperty("outputHeight", NullValueHandling = NullValueHandling.Ignore)]
-		public int OutputHeight;
+		public double? OutputHeight;
 	}
 	public struct SetVideoSettingsResponseData
 	{

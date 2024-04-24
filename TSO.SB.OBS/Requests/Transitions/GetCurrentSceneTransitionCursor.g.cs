@@ -16,7 +16,7 @@ Note: `transitionCursor` will return 1.0 when the transition is inactive.)
 	public struct GetCurrentSceneTransitionCursorResponseData
 	{
 		[JsonProperty("transitionCursor")]
-		public int TransitionCursor;
+		public double TransitionCursor;
 
 
 	}

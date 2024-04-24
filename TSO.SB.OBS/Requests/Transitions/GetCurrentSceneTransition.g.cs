@@ -26,7 +26,7 @@ namespace TSO.SB.OBS.Transitions
 		public bool TransitionFixed;
 
 		[JsonProperty("transitionDuration")]
-		public int TransitionDuration;
+		public double TransitionDuration;
 
 		[JsonProperty("transitionConfigurable")]
 		public bool TransitionConfigurable;

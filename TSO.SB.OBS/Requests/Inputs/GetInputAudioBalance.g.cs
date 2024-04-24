@@ -18,7 +18,7 @@ namespace TSO.SB.OBS.Inputs
 	public struct GetInputAudioBalanceResponseData
 	{
 		[JsonProperty("inputAudioBalance")]
-		public int InputAudioBalance;
+		public double InputAudioBalance;
 
 
 	}

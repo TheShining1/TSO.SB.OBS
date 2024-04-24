@@ -21,7 +21,7 @@ namespace TSO.SB.OBS.Inputs
 		[JsonProperty("inputSettings", NullValueHandling = NullValueHandling.Ignore)]
 		public Dictionary<string,object> InputSettings;
 		[JsonProperty("sceneItemEnabled", NullValueHandling = NullValueHandling.Ignore)]
-		public bool SceneItemEnabled;
+		public bool? SceneItemEnabled;
 	}
 	public struct CreateInputResponseData
 	{
@@ -29,7 +29,7 @@ namespace TSO.SB.OBS.Inputs
 		public string InputUuid;
 
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 
 
 	}

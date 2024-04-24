@@ -6,278 +6,279 @@ namespace TSO.SB.OBS
 {
   public struct Input
   {
-    [JsonProperty("inputName")]
+    [JsonProperty("inputName", NullValueHandling = NullValueHandling.Ignore)]
     public string InputName { get; set; }
 
-    [JsonProperty("inputKind")]
+    [JsonProperty("inputKind", NullValueHandling = NullValueHandling.Ignore)]
     public string InputKind { get; set; }
 
-    [JsonProperty("unversionedInputKind")]
+    [JsonProperty("unversionedInputKind", NullValueHandling = NullValueHandling.Ignore)]
     public string UnversionedInputKind { get; set; }
   }
 
   public struct Output
   {
-    [JsonProperty("outputName")]
+    [JsonProperty("outputName", NullValueHandling = NullValueHandling.Ignore)]
     public string Name { get; set; }
 
-    [JsonProperty("outputKind")]
+    [JsonProperty("outputKind", NullValueHandling = NullValueHandling.Ignore)]
     public string Kind { get; set; }
 
-    [JsonProperty("outputWidth")]
-    public int Width { get; set; }
+    [JsonProperty("outputWidth", NullValueHandling = NullValueHandling.Ignore)]
+    public int? Width { get; set; }
 
-    [JsonProperty("outputHeight")]
-    public int Height { get; set; }
+    [JsonProperty("outputHeight", NullValueHandling = NullValueHandling.Ignore)]
+    public int? Height { get; set; }
 
-    [JsonProperty("outputActive")]
-    public bool Active { get; set; }
+    [JsonProperty("outputActive", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? Active { get; set; }
 
-    [JsonProperty("outputFlags")]
+    [JsonProperty("outputFlags", NullValueHandling = NullValueHandling.Ignore)]
     public OutputFlags Flags { get; set; }
   }
 
   public struct OutputFlags
   {
-    [JsonProperty("OBS_OUTPUT_AUDIO")]
-    public bool Audio { get; set; }
+    [JsonProperty("OBS_OUTPUT_AUDIO", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? Audio { get; set; }
 
-    [JsonProperty("OBS_OUTPUT_VIDEO")]
-    public bool Video { get; set; }
+    [JsonProperty("OBS_OUTPUT_VIDEO", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? Video { get; set; }
 
-    [JsonProperty("OBS_OUTPUT_ENCODED")]
-    public bool Encoded { get; set; }
+    [JsonProperty("OBS_OUTPUT_ENCODED", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? Encoded { get; set; }
 
-    [JsonProperty("OBS_OUTPUT_MULTI_TRACK")]
-    public bool MultiTrack { get; set; }
+    [JsonProperty("OBS_OUTPUT_MULTI_TRACK", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? MultiTrack { get; set; }
 
-    [JsonProperty("OBS_OUTPUT_SERVICE")]
-    public bool Service { get; set; }
+    [JsonProperty("OBS_OUTPUT_SERVICE", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? Service { get; set; }
   }
 
   public struct Scene
   {
-    [JsonProperty("sceneIndex")]
-    public int SceneIndex { get; set; }
+    [JsonProperty("sceneIndex", NullValueHandling = NullValueHandling.Ignore)]
+    public int? SceneIndex { get; set; }
 
-    [JsonProperty("sceneName")]
+    [JsonProperty("sceneName", NullValueHandling = NullValueHandling.Ignore)]
     public string SceneName { get; set; }
   }
 
   public struct PropertyItem
   {
-    [JsonProperty("itemName")]
+    [JsonProperty("itemName", NullValueHandling = NullValueHandling.Ignore)]
     public string ItemName { get; set; }
 
-    [JsonProperty("itemEnabled")]
-    public bool ItemEnabled { get; set; }
+    [JsonProperty("itemEnabled", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? ItemEnabled { get; set; }
 
-    [JsonProperty("itemValue")]
+    [JsonProperty("itemValue", NullValueHandling = NullValueHandling.Ignore)]
     public object ItemValue { get; set; }
   }
 
   public struct Filter
   {
-    [JsonProperty("filterEnabled")]
-    public bool FilterEnabled { get; set; }
+    [JsonProperty("filterEnabled", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? FilterEnabled { get; set; }
 
-    [JsonProperty("filterIndex")]
-    public int FilterIndex { get; set; }
+    [JsonProperty("filterIndex", NullValueHandling = NullValueHandling.Ignore)]
+    public int? FilterIndex { get; set; }
 
-    [JsonProperty("filterKind")]
+    [JsonProperty("filterKind", NullValueHandling = NullValueHandling.Ignore)]
     public string FilterKind { get; set; }
 
-    [JsonProperty("filterName")]
+    [JsonProperty("filterName", NullValueHandling = NullValueHandling.Ignore)]
     public string FilterName { get; set; }
 
-    [JsonProperty("filterSettings")]
+    [JsonProperty("filterSettings", NullValueHandling = NullValueHandling.Ignore)]
     public Dictionary<string, object> FilterSettings { get; set; }
   }
 
   public struct Transition
   {
-    [JsonProperty("transitionConfigurable")]
-    public bool TransitionConfigurable { get; set; }
+    [JsonProperty("transitionConfigurable", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? TransitionConfigurable { get; set; }
 
-    [JsonProperty("transitionFixed")]
-    public bool TransitionFixed { get; set; }
+    [JsonProperty("transitionFixed", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? TransitionFixed { get; set; }
 
-    [JsonProperty("transitionKind")]
+    [JsonProperty("transitionKind", NullValueHandling = NullValueHandling.Ignore)]
     public string TransitionKind { get; set; }
 
-    [JsonProperty("transitionName")]
+    [JsonProperty("transitionName", NullValueHandling = NullValueHandling.Ignore)]
     public string TransitionName { get; set; }
   }
 
   public struct SceneItemBasic
   {
-    [JsonProperty("sceneItemId")]
-    public int SceneItemID { get; set; }
+    [JsonProperty("sceneItemId", NullValueHandling = NullValueHandling.Ignore)]
+    public int? SceneItemID { get; set; }
 
-    [JsonProperty("sceneItemIndex")]
-    public int SceneItemIndex { get; set; }
+    [JsonProperty("sceneItemIndex", NullValueHandling = NullValueHandling.Ignore)]
+    public int? SceneItemIndex { get; set; }
   }
 
   public struct SceneItem
   {
-    [JsonProperty("inputKind")]
+    [JsonProperty("inputKind", NullValueHandling = NullValueHandling.Ignore)]
     public string InputKind { get; set; }
 
-    [JsonProperty("isGroup")]
-    public bool IsGroup { get; set; }
+    [JsonProperty("isGroup", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? IsGroup { get; set; }
 
-    [JsonProperty("sceneItemBlendMode")]
+    [JsonProperty("sceneItemBlendMode", NullValueHandling = NullValueHandling.Ignore)]
     public string SceneItemBlendMode { get; set; }
 
-    [JsonProperty("sceneItemEnabled")]
-    public bool SceneItemEnabled { get; set; }
+    [JsonProperty("sceneItemEnabled", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? SceneItemEnabled { get; set; }
 
-    [JsonProperty("sceneItemId")]
-    public int SceneItemID { get; set; }
+    [JsonProperty("sceneItemId", NullValueHandling = NullValueHandling.Ignore)]
+    public int? SceneItemID { get; set; }
 
-    [JsonProperty("sceneItemIndex")]
-    public int SceneItemIndex { get; set; }
+    [JsonProperty("sceneItemIndex", NullValueHandling = NullValueHandling.Ignore)]
+    public int? SceneItemIndex { get; set; }
 
-    [JsonProperty("sceneItemLocked")]
-    public bool SceneItemLocked { get; set; }
+    [JsonProperty("sceneItemLocked", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? SceneItemLocked { get; set; }
 
-    [JsonProperty("sceneItemTransform")]
+    [JsonProperty("sceneItemTransform", NullValueHandling = NullValueHandling.Ignore)]
     public SceneItemTransform SceneItemTransform { get; set; }
 
-    [JsonProperty("sourceName")]
+    [JsonProperty("sourceName", NullValueHandling = NullValueHandling.Ignore)]
     public string SourceName { get; set; }
 
-    [JsonProperty("sourceType")]
+    [JsonProperty("sourceType", NullValueHandling = NullValueHandling.Ignore)]
     public string SourceType { get; set; }
   }
 
-  public class InputAudioTracks : Dictionary<string, bool> { }
+  public class InputAudioTracks : Dictionary<string, bool?> { }
 
   public struct KeyModifiers
   {
-    [JsonProperty("face")]
+    [JsonProperty("face", NullValueHandling = NullValueHandling.Ignore)]
     public string Shift { get; set; }
 
-    [JsonProperty("flags")]
-    public int Control { get; set; }
+    [JsonProperty("flags", NullValueHandling = NullValueHandling.Ignore)]
+    public int? Control { get; set; }
 
-    [JsonProperty("size")]
-    public int Alt { get; set; }
+    [JsonProperty("size", NullValueHandling = NullValueHandling.Ignore)]
+    public int? Alt { get; set; }
 
-    [JsonProperty("style")]
+    [JsonProperty("style", NullValueHandling = NullValueHandling.Ignore)]
     public string Command { get; set; }
   }
 
   public struct Monitor
   {
-    [JsonProperty("monitorHeight")]
-    public int MonitorHeight { get; set; }
+    [JsonProperty("monitorHeight", NullValueHandling = NullValueHandling.Ignore)]
+    public int? MonitorHeight { get; set; }
 
-    [JsonProperty("monitorIndex")]
-    public int MonitorIndex { get; set; }
+    [JsonProperty("monitorIndex", NullValueHandling = NullValueHandling.Ignore)]
+    public int? MonitorIndex { get; set; }
 
-    [JsonProperty("monitorName")]
+    [JsonProperty("monitorName", NullValueHandling = NullValueHandling.Ignore)]
     public string MonitorName { get; set; }
 
-    [JsonProperty("monitorPositionX")]
-    public int MonitorPositionX { get; set; }
+    [JsonProperty("monitorPositionX", NullValueHandling = NullValueHandling.Ignore)]
+    public int? MonitorPositionX { get; set; }
 
-    [JsonProperty("monitorPositionY")]
-    public int MonitorPositionY { get; set; }
+    [JsonProperty("monitorPositionY", NullValueHandling = NullValueHandling.Ignore)]
+    public int? MonitorPositionY { get; set; }
 
-    [JsonProperty("monitorWidth")]
-    public int MonitorWidth { get; set; }
+    [JsonProperty("monitorWidth", NullValueHandling = NullValueHandling.Ignore)]
+    public int? MonitorWidth { get; set; }
   }
 
   public struct StreamServiceSettings
   {
-    [JsonProperty("bwtest")]
-    public bool Bwtest { get; set; }
+    [JsonProperty("bwtest", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? Bwtest { get; set; }
 
-    [JsonProperty("key")]
+    [JsonProperty("key", NullValueHandling = NullValueHandling.Ignore)]
     public string Key { get; set; }
 
-    [JsonProperty("password")]
+    [JsonProperty("password", NullValueHandling = NullValueHandling.Ignore)]
     public string Password { get; set; }
 
-    [JsonProperty("server")]
+    [JsonProperty("server", NullValueHandling = NullValueHandling.Ignore)]
     public string Server { get; set; }
 
-    [JsonProperty("use_auth")]
-    public bool UseAuth { get; set; }
+    [JsonProperty("use_auth", NullValueHandling = NullValueHandling.Ignore)]
+    public bool? UseAuth { get; set; }
 
-    [JsonProperty("username")]
+    [JsonProperty("username", NullValueHandling = NullValueHandling.Ignore)]
     public string Username { get; set; }
 
-    [JsonProperty("protocol")]
+    [JsonProperty("protocol", NullValueHandling = NullValueHandling.Ignore)]
     public string Protocol { get; set; }
-    [JsonProperty("service")]
+
+    [JsonProperty("service", NullValueHandling = NullValueHandling.Ignore)]
     public string Service { get; set; }
   }
 
   public struct SceneItemTransform
   {
-    [JsonProperty("alignment")]
-    public double Alignment { get; set; }
+    [JsonProperty("alignment", NullValueHandling = NullValueHandling.Ignore)]
+    public double? Alignment { get; set; }
 
-    [JsonProperty("boundsAlignment")]
-    public double BoundsAlignment { get; set; }
+    [JsonProperty("boundsAlignment", NullValueHandling = NullValueHandling.Ignore)]
+    public double? BoundsAlignment { get; set; }
 
-    [JsonProperty("boundsHeight")]
-    public double BoundsHeight { get; set; }
+    [JsonProperty("boundsHeight", NullValueHandling = NullValueHandling.Ignore)]
+    public double? BoundsHeight { get; set; }
 
-    [JsonProperty("boundsType")]
+    [JsonProperty("boundsType", NullValueHandling = NullValueHandling.Ignore)]
     public string BoundsType { get; set; }
 
-    [JsonProperty("boundsWidth")]
-    public double BoundsWidth { get; set; }
+    [JsonProperty("boundsWidth", NullValueHandling = NullValueHandling.Ignore)]
+    public double? BoundsWidth { get; set; }
 
-    [JsonProperty("cropBottom")]
-    public double CropBottom { get; set; }
+    [JsonProperty("cropBottom", NullValueHandling = NullValueHandling.Ignore)]
+    public double? CropBottom { get; set; }
 
-    [JsonProperty("cropLeft")]
-    public double CropLeft { get; set; }
+    [JsonProperty("cropLeft", NullValueHandling = NullValueHandling.Ignore)]
+    public double? CropLeft { get; set; }
 
-    [JsonProperty("cropRight")]
-    public double CropRight { get; set; }
+    [JsonProperty("cropRight", NullValueHandling = NullValueHandling.Ignore)]
+    public double? CropRight { get; set; }
 
-    [JsonProperty("cropTop")]
-    public double CropTop { get; set; }
+    [JsonProperty("cropTop", NullValueHandling = NullValueHandling.Ignore)]
+    public double? CropTop { get; set; }
 
-    [JsonProperty("height")]
-    public double Height { get; set; }
+    [JsonProperty("height", NullValueHandling = NullValueHandling.Ignore)]
+    public double? Height { get; set; }
 
-    [JsonProperty("positionX")]
-    public double PositionX { get; set; }
+    [JsonProperty("positionX", NullValueHandling = NullValueHandling.Ignore)]
+    public double? PositionX { get; set; }
 
-    [JsonProperty("positionY")]
-    public double PositionY { get; set; }
+    [JsonProperty("positionY", NullValueHandling = NullValueHandling.Ignore)]
+    public double? PositionY { get; set; }
 
-    [JsonProperty("rotation")]
-    public double Rotation { get; set; }
+    [JsonProperty("rotation", NullValueHandling = NullValueHandling.Ignore)]
+    public double? Rotation { get; set; }
 
-    [JsonProperty("scaleX")]
-    public double ScaleX { get; set; }
+    [JsonProperty("scaleX", NullValueHandling = NullValueHandling.Ignore)]
+    public double? ScaleX { get; set; }
 
-    [JsonProperty("scaleY")]
-    public double ScaleY { get; set; }
+    [JsonProperty("scaleY", NullValueHandling = NullValueHandling.Ignore)]
+    public double? ScaleY { get; set; }
 
-    [JsonProperty("sourceHeight")]
-    public double SourceHeight { get; set; }
+    [JsonProperty("sourceHeight", NullValueHandling = NullValueHandling.Ignore)]
+    public double? SourceHeight { get; set; }
 
-    [JsonProperty("sourceWidth")]
-    public double SourceWidth { get; set; }
+    [JsonProperty("sourceWidth", NullValueHandling = NullValueHandling.Ignore)]
+    public double? SourceWidth { get; set; }
 
-    [JsonProperty("width")]
-    public double Width { get; set; }
+    [JsonProperty("width", NullValueHandling = NullValueHandling.Ignore)]
+    public double? Width { get; set; }
   }
 
   public struct InputVolumeMeter
   {
-    [JsonProperty("inputName")]
+    [JsonProperty("inputName", NullValueHandling = NullValueHandling.Ignore)]
     public string Name { get; set; }
 
-    [JsonProperty("inputLevelsMul")]
+    [JsonProperty("inputLevelsMul", NullValueHandling = NullValueHandling.Ignore)]
     public List<double[]> Levels { get; set; }
   }
 }

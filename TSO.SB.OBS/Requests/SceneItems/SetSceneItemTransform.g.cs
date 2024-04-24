@@ -15,7 +15,7 @@ namespace TSO.SB.OBS.SceneItems
 		[JsonProperty("sceneUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string SceneUuid;
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 		[JsonProperty("sceneItemTransform")]
 		public SceneItemTransform SceneItemTransform;
 	}

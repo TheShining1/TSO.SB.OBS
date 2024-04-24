@@ -17,7 +17,7 @@ namespace TSO.SB.OBS.Inputs
 		[JsonProperty("inputSettings")]
 		public Dictionary<string,object> InputSettings;
 		[JsonProperty("overlay", NullValueHandling = NullValueHandling.Ignore)]
-		public bool Overlay;
+		public bool? Overlay;
 	}
 	public struct SetInputSettingsResponseData
 	{

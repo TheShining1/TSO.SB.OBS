@@ -17,7 +17,7 @@ Scenes only)
 		[JsonProperty("sceneUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string SceneUuid;
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 		[JsonProperty("destinationSceneName", NullValueHandling = NullValueHandling.Ignore)]
 		public string DestinationSceneName;
 		[JsonProperty("destinationSceneUuid", NullValueHandling = NullValueHandling.Ignore)]
@@ -26,7 +26,7 @@ Scenes only)
 	public struct DuplicateSceneItemResponseData
 	{
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 
 
 	}

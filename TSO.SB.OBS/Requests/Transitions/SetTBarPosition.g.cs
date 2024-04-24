@@ -13,9 +13,9 @@ namespace TSO.SB.OBS.Transitions
 	public struct SetTBarPositionRequestData
 	{
 		[JsonProperty("position")]
-		public int Position;
+		public double Position;
 		[JsonProperty("release", NullValueHandling = NullValueHandling.Ignore)]
-		public bool Release;
+		public bool? Release;
 	}
 	public struct SetTBarPositionResponseData
 	{

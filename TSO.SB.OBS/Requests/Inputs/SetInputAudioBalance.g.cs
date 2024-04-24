@@ -15,7 +15,7 @@ namespace TSO.SB.OBS.Inputs
 		[JsonProperty("inputUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string InputUuid;
 		[JsonProperty("inputAudioBalance")]
-		public int InputAudioBalance;
+		public double InputAudioBalance;
 	}
 	public struct SetInputAudioBalanceResponseData
 	{

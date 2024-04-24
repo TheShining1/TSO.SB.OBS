@@ -23,10 +23,10 @@ namespace TSO.SB.OBS.Record
 		public string OutputTimecode;
 
 		[JsonProperty("outputDuration")]
-		public int OutputDuration;
+		public double OutputDuration;
 
 		[JsonProperty("outputBytes")]
-		public int OutputBytes;
+		public double OutputBytes;
 
 
 	}

@@ -20,7 +20,7 @@ namespace TSO.SB.OBS.Filters
 		public string FilterKind;
 
 		[JsonProperty("filterIndex")]
-		public int FilterIndex;
+		public double FilterIndex;
 
 		[JsonProperty("filterSettings")]
 		public Dictionary<string,object> FilterSettings;

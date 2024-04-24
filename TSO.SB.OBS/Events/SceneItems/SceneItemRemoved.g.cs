@@ -25,7 +25,7 @@ This event is not emitted when the scene the item is in is removed.)
 		public string SourceUuid;
 
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 
 	}
 }

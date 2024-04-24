@@ -11,7 +11,7 @@ namespace TSO.SB.OBS.Transitions
 	public struct SetCurrentSceneTransitionDurationRequestData
 	{
 		[JsonProperty("transitionDuration")]
-		public int TransitionDuration;
+		public double TransitionDuration;
 	}
 	public struct SetCurrentSceneTransitionDurationResponseData
 	{

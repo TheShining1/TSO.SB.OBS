@@ -14,37 +14,37 @@ namespace TSO.SB.OBS.General
 	public struct GetStatsResponseData
 	{
 		[JsonProperty("cpuUsage")]
-		public int CpuUsage;
+		public double CpuUsage;
 
 		[JsonProperty("memoryUsage")]
-		public int MemoryUsage;
+		public double MemoryUsage;
 
 		[JsonProperty("availableDiskSpace")]
-		public int AvailableDiskSpace;
+		public double AvailableDiskSpace;
 
 		[JsonProperty("activeFps")]
-		public int ActiveFps;
+		public double ActiveFps;
 
 		[JsonProperty("averageFrameRenderTime")]
-		public int AverageFrameRenderTime;
+		public double AverageFrameRenderTime;
 
 		[JsonProperty("renderSkippedFrames")]
-		public int RenderSkippedFrames;
+		public double RenderSkippedFrames;
 
 		[JsonProperty("renderTotalFrames")]
-		public int RenderTotalFrames;
+		public double RenderTotalFrames;
 
 		[JsonProperty("outputSkippedFrames")]
-		public int OutputSkippedFrames;
+		public double OutputSkippedFrames;
 
 		[JsonProperty("outputTotalFrames")]
-		public int OutputTotalFrames;
+		public double OutputTotalFrames;
 
 		[JsonProperty("webSocketSessionIncomingMessages")]
-		public int WebSocketSessionIncomingMessages;
+		public double WebSocketSessionIncomingMessages;
 
 		[JsonProperty("webSocketSessionOutgoingMessages")]
-		public int WebSocketSessionOutgoingMessages;
+		public double WebSocketSessionOutgoingMessages;
 
 
 	}

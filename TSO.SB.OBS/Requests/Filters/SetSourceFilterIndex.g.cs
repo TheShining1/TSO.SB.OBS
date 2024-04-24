@@ -17,7 +17,7 @@ namespace TSO.SB.OBS.Filters
 		[JsonProperty("filterName")]
 		public string FilterName;
 		[JsonProperty("filterIndex")]
-		public int FilterIndex;
+		public double FilterIndex;
 	}
 	public struct SetSourceFilterIndexResponseData
 	{

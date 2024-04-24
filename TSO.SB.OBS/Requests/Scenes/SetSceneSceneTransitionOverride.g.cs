@@ -17,7 +17,7 @@ namespace TSO.SB.OBS.Scenes
 		[JsonProperty("transitionName", NullValueHandling = NullValueHandling.Ignore)]
 		public string TransitionName;
 		[JsonProperty("transitionDuration", NullValueHandling = NullValueHandling.Ignore)]
-		public int TransitionDuration;
+		public double? TransitionDuration;
 	}
 	public struct SetSceneSceneTransitionOverrideResponseData
 	{

@@ -11,7 +11,7 @@ namespace TSO.SB.OBS.Inputs
 	public struct GetInputKindListRequestData
 	{
 		[JsonProperty("unversioned", NullValueHandling = NullValueHandling.Ignore)]
-		public bool Unversioned;
+		public bool? Unversioned;
 	}
 	public struct GetInputKindListResponseData
 	{

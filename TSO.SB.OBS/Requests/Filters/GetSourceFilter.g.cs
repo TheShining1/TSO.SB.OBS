@@ -23,7 +23,7 @@ namespace TSO.SB.OBS.Filters
 		public bool FilterEnabled;
 
 		[JsonProperty("filterIndex")]
-		public int FilterIndex;
+		public double FilterIndex;
 
 		[JsonProperty("filterKind")]
 		public string FilterKind;

@@ -23,7 +23,7 @@ Note: A transition UUID response field is not currently able to be implemented a
 		public string TransitionName;
 
 		[JsonProperty("transitionDuration")]
-		public int TransitionDuration;
+		public double TransitionDuration;
 
 
 	}

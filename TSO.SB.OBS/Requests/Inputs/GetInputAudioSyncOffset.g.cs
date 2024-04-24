@@ -20,7 +20,7 @@ Note: The audio sync offset can be negative too!)
 	public struct GetInputAudioSyncOffsetResponseData
 	{
 		[JsonProperty("inputAudioSyncOffset")]
-		public int InputAudioSyncOffset;
+		public double InputAudioSyncOffset;
 
 
 	}

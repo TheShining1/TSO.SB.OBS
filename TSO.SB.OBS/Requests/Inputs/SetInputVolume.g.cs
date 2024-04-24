@@ -15,9 +15,9 @@ namespace TSO.SB.OBS.Inputs
 		[JsonProperty("inputUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string InputUuid;
 		[JsonProperty("inputVolumeMul", NullValueHandling = NullValueHandling.Ignore)]
-		public int InputVolumeMul;
+		public double? InputVolumeMul;
 		[JsonProperty("inputVolumeDb", NullValueHandling = NullValueHandling.Ignore)]
-		public int InputVolumeDb;
+		public double? InputVolumeDb;
 	}
 	public struct SetInputVolumeResponseData
 	{

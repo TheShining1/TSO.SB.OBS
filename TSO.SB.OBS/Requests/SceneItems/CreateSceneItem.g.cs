@@ -21,12 +21,12 @@ Scenes only)
 		[JsonProperty("sourceUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string SourceUuid;
 		[JsonProperty("sceneItemEnabled", NullValueHandling = NullValueHandling.Ignore)]
-		public bool SceneItemEnabled;
+		public bool? SceneItemEnabled;
 	}
 	public struct CreateSceneItemResponseData
 	{
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 
 
 	}

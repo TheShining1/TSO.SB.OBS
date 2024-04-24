@@ -32,10 +32,10 @@ Media States:
 		public string MediaState;
 
 		[JsonProperty("mediaDuration")]
-		public int MediaDuration;
+		public double MediaDuration;
 
 		[JsonProperty("mediaCursor")]
-		public int MediaCursor;
+		public double MediaCursor;
 
 
 	}

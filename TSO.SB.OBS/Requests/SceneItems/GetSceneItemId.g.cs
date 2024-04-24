@@ -19,12 +19,12 @@ Scenes and Groups)
 		[JsonProperty("sourceName")]
 		public string SourceName;
 		[JsonProperty("searchOffset", NullValueHandling = NullValueHandling.Ignore)]
-		public int SearchOffset;
+		public double? SearchOffset;
 	}
 	public struct GetSceneItemIdResponseData
 	{
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 
 
 	}

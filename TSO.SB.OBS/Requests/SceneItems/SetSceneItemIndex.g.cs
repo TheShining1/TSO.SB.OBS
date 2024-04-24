@@ -17,9 +17,9 @@ Scenes and Groups)
 		[JsonProperty("sceneUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string SceneUuid;
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 		[JsonProperty("sceneItemIndex")]
-		public int SceneItemIndex;
+		public double SceneItemIndex;
 	}
 	public struct SetSceneItemIndexResponseData
 	{

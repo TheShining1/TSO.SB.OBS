@@ -11,9 +11,9 @@ namespace TSO.SB.OBS.General
 	public struct SleepRequestData
 	{
 		[JsonProperty("sleepMillis", NullValueHandling = NullValueHandling.Ignore)]
-		public int SleepMillis;
+		public double? SleepMillis;
 		[JsonProperty("sleepFrames", NullValueHandling = NullValueHandling.Ignore)]
-		public int SleepFrames;
+		public double? SleepFrames;
 	}
 	public struct SleepResponseData
 	{

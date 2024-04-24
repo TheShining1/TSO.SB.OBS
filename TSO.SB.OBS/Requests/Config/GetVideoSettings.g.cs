@@ -16,22 +16,22 @@ Note: To get the true FPS value, divide the FPS numerator by the FPS denominator
 	public struct GetVideoSettingsResponseData
 	{
 		[JsonProperty("fpsNumerator")]
-		public int FpsNumerator;
+		public double FpsNumerator;
 
 		[JsonProperty("fpsDenominator")]
-		public int FpsDenominator;
+		public double FpsDenominator;
 
 		[JsonProperty("baseWidth")]
-		public int BaseWidth;
+		public double BaseWidth;
 
 		[JsonProperty("baseHeight")]
-		public int BaseHeight;
+		public double BaseHeight;
 
 		[JsonProperty("outputWidth")]
-		public int OutputWidth;
+		public double OutputWidth;
 
 		[JsonProperty("outputHeight")]
-		public int OutputHeight;
+		public double OutputHeight;
 
 
 	}

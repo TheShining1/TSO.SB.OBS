@@ -17,10 +17,10 @@ namespace TSO.SB.OBS.Inputs
 		public string InputUuid;
 
 		[JsonProperty("inputVolumeMul")]
-		public int InputVolumeMul;
+		public double InputVolumeMul;
 
 		[JsonProperty("inputVolumeDb")]
-		public int InputVolumeDb;
+		public double InputVolumeDb;
 
 	}
 }

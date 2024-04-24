@@ -20,7 +20,7 @@ namespace TSO.SB.OBS.General
 		public string ObsWebSocketVersion;
 
 		[JsonProperty("rpcVersion")]
-		public int RpcVersion;
+		public double RpcVersion;
 
 		[JsonProperty("availableRequests")]
 		public string[] AvailableRequests;

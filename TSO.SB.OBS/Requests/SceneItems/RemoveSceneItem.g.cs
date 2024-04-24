@@ -17,7 +17,7 @@ Scenes only)
 		[JsonProperty("sceneUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string SceneUuid;
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 	}
 	public struct RemoveSceneItemResponseData
 	{

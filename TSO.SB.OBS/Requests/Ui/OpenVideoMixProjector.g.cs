@@ -21,7 +21,7 @@ Note: This request serves to provide feature parity with 4.x. It is very likely 
 		[JsonProperty("videoMixType")]
 		public string VideoMixType;
 		[JsonProperty("monitorIndex", NullValueHandling = NullValueHandling.Ignore)]
-		public int MonitorIndex;
+		public double? MonitorIndex;
 		[JsonProperty("projectorGeometry", NullValueHandling = NullValueHandling.Ignore)]
 		public string ProjectorGeometry;
 	}

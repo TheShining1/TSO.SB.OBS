@@ -25,19 +25,19 @@ namespace TSO.SB.OBS.Outputs
 		public string OutputTimecode;
 
 		[JsonProperty("outputDuration")]
-		public int OutputDuration;
+		public double OutputDuration;
 
 		[JsonProperty("outputCongestion")]
-		public int OutputCongestion;
+		public double OutputCongestion;
 
 		[JsonProperty("outputBytes")]
-		public int OutputBytes;
+		public double OutputBytes;
 
 		[JsonProperty("outputSkippedFrames")]
-		public int OutputSkippedFrames;
+		public double OutputSkippedFrames;
 
 		[JsonProperty("outputTotalFrames")]
-		public int OutputTotalFrames;
+		public double OutputTotalFrames;
 
 
 	}

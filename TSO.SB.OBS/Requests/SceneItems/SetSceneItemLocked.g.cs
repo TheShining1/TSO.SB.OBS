@@ -17,7 +17,7 @@ Scenes and Group)
 		[JsonProperty("sceneUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string SceneUuid;
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 		[JsonProperty("sceneItemLocked")]
 		public bool SceneItemLocked;
 	}

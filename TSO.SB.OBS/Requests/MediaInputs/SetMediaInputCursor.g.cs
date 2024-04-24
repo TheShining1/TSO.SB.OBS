@@ -17,7 +17,7 @@ This request does not perform bounds checking of the cursor position.)
 		[JsonProperty("inputUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string InputUuid;
 		[JsonProperty("mediaCursor")]
-		public int MediaCursor;
+		public double MediaCursor;
 	}
 	public struct SetMediaInputCursorResponseData
 	{

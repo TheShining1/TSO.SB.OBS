@@ -23,10 +23,10 @@ namespace TSO.SB.OBS.SceneItems
 		public string SourceUuid;
 
 		[JsonProperty("sceneItemId")]
-		public int SceneItemId;
+		public double SceneItemId;
 
 		[JsonProperty("sceneItemIndex")]
-		public int SceneItemIndex;
+		public double SceneItemIndex;
 
 	}
 }

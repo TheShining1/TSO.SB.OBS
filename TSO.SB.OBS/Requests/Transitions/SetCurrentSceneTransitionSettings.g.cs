@@ -13,7 +13,7 @@ namespace TSO.SB.OBS.Transitions
 		[JsonProperty("transitionSettings")]
 		public Dictionary<string,object> TransitionSettings;
 		[JsonProperty("overlay", NullValueHandling = NullValueHandling.Ignore)]
-		public bool Overlay;
+		public bool? Overlay;
 	}
 	public struct SetCurrentSceneTransitionSettingsResponseData
 	{

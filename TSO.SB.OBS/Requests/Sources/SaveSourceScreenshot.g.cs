@@ -24,11 +24,11 @@ If `imageWidth` and `imageHeight` are not specified, the compressed image will u
 		[JsonProperty("imageFilePath")]
 		public string ImageFilePath;
 		[JsonProperty("imageWidth", NullValueHandling = NullValueHandling.Ignore)]
-		public int ImageWidth;
+		public double? ImageWidth;
 		[JsonProperty("imageHeight", NullValueHandling = NullValueHandling.Ignore)]
-		public int ImageHeight;
+		public double? ImageHeight;
 		[JsonProperty("imageCompressionQuality", NullValueHandling = NullValueHandling.Ignore)]
-		public int ImageCompressionQuality;
+		public double? ImageCompressionQuality;
 	}
 	public struct SaveSourceScreenshotResponseData
 	{

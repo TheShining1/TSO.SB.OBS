@@ -19,7 +19,7 @@ namespace TSO.SB.OBS.Filters
 		[JsonProperty("filterSettings")]
 		public Dictionary<string,object> FilterSettings;
 		[JsonProperty("overlay", NullValueHandling = NullValueHandling.Ignore)]
-		public bool Overlay;
+		public bool? Overlay;
 	}
 	public struct SetSourceFilterSettingsResponseData
 	{

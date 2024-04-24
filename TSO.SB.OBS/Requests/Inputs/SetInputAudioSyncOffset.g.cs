@@ -15,7 +15,7 @@ namespace TSO.SB.OBS.Inputs
 		[JsonProperty("inputUuid", NullValueHandling = NullValueHandling.Ignore)]
 		public string InputUuid;
 		[JsonProperty("inputAudioSyncOffset")]
-		public int InputAudioSyncOffset;
+		public double InputAudioSyncOffset;
 	}
 	public struct SetInputAudioSyncOffsetResponseData
 	{
