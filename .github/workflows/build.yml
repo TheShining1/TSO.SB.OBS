@@ -1,0 +1,38 @@
+# Build DLL
+
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]  
+    
+env:
+  DLL_NAME: "TSO.SB.OBS.dll"
+  
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+    - name: Navigate to Workspace
+      run: cd ${{github.workspace}}
+    - name: Restore Packages
+      run: nuget restore TSO.SB.OBS.sln    
+    - name: Set build path env
+      run: |
+        $buildPath = "${{github.workspace}}/Build".Replace("\","/")
+        echo "BUILD_PATH=$buildPath" >> $env:GITHUB_ENV
+    - name: Build Solution
+      run: msbuild.exe TSO.SB.OBS.sln /p:platform="x64" /p:configuration="Release" /p:OutputPath=${{env.BUILD_PATH}}
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: v.1.0.0
+        files: "${{env.BUILD_PATH}}/${{env.DLL_NAME}}"
