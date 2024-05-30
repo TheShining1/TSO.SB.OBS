@@ -1,4 +1,7 @@
 # TSO.SB.OBS
+
+[![Tutorial](TSO.SB.OBS_thumbnail.png)](https://www.youtube.com/watch?v=tP5hMnZS3Tg)
+
 Streamer.Bot helper library with OBS structures.
 
 This repository contains a dynamic-link library (DLL) which you can use inside C# code sub-actions in Streamer.Bot's [`ObsSendRaw`](https://docs.streamer.bot/api/csharp/obs/raw#ObsSendRaw) method. It contains the set of structures for requset, response and event data used in OBS Websocket 5 ([OBS WebSocket protocol documentation](https://github.com/obsproject/obs-websocket/blob/master/docs/generated/protocol.md))
